@@ -1,22 +1,33 @@
 # credit_risk_classification
 Module 20 Challenge
 
-Credit Risk Analysis Report
+Background
+In this Challenge, you’ll use various techniques to train and evaluate a model based on loan risk. You’ll use a dataset of historical lending activity from a peer-to-peer lending services company to build a model that can identify the creditworthiness of borrowers.
 
-Purpose of analysis
+Instructions
+The instructions for this Challenge are divided into the following subsections:
+•	Split the Data into Training and Testing Sets
+•	Create a Logistic Regression Model with the Original Data
+•	Write a Credit Risk Analysis Report
+Split the Data into Training and Testing Sets
+Open the starter code notebook and use it to complete the following steps:
+1.	Read the lending_data.csv data from the Resources folder into a Pandas DataFrame.
+2.	Create the labels set (y) from the “loan_status” column, and then create the features (X) DataFrame from the remaining columns.
+NOTE
+A value of 0 in the “loan_status” column means that the loan is healthy. A value of 1 means that the loan has a high risk of defaulting.
+3.	Split the data into training and testing datasets by using train_test_split.
+Create a Logistic Regression Model with the Original Data
+Use your knowledge of logistic regression to complete the following steps:
+1.	Fit a logistic regression model by using the training data (X_train and y_train).
+2.	Save the predictions for the testing data labels by using the testing feature data (X_test) and the fitted model.
+3.	Evaluate the model’s performance by doing the following:
+o	Generate a confusion matrix.
+o	Print the classification report.
+4.	Answer the following question: How well does the logistic regression model predict both the 0 (healthy loan) and 1 (high-risk loan) labels?
+Write a Credit Risk Analysis Report
+Write a brief report that includes a summary and analysis of the performance of the machine learning models that you used in this homework. You should write this report as the README.md file included in your GitHub repository.
+Structure your report by using the report template that Starter_Code.zip includes, ensuring that it contains the following:
+1.	An overview of the analysis: Explain the purpose of this analysis.
+2.	The results: Using a bulleted list, describe the accuracy score, the precision score, and recall score of the machine learning model.
+3.	A summary: Summarise the results from the machine learning model. Include your justification for recommending the model for use by the company. If you don’t recommend the model, justify your reasoning.
 
-The purpose of this credit risk analysis is to assess the performance of a machine learning model designed to predict credit default risk for potential borrowers. By evaluating the accuracy, precision, and recall of the model, we can determine its suitability for implementation within the company's credit approval process. The analysis will provide insights into the model's predictive capabilities, allowing the company to make informed decisions about approving or rejecting loan applications.
-
-After evaluating the machine learning model's performance on the credit risk dataset, the following results were obtained:
-
-Accuracy: 99%
-Precision: 100% for healthy loans & 85% for high risk loans - 92% average
-Recall: 99% for healthy loans & 91% for high risk loans - 95% average 
-
-Justification for Recommending the Model:
-
-The machine learning model exhibits a very high accuracy of 99%, indicating that it correctly predicts credit defaults and non-defaults in most cases. Additionally, the model achieves a precision score of 92%, suggesting that out of all the instances it predicts as credit defaults, 92% are genuinely defaults. This precision level is acceptable and ensures that the company can minimize the risk of approving loans for applicants who might default.
-
-The model's high recall score of 95% is particularly noteworthy. This indicates that the model effectively captures a significant portion of actual credit defaults. In other words, it identifies 95% of all borrowers who are likely to default. High recall is crucial for the company as it helps in minimizing the number of false negatives (i.e., approving loans for applicants who would eventually default). Reducing false negatives is of paramount importance to mitigate potential losses for the company.
-
-Given the high accuracy, precision, and excellent recall, I recommend implementing this machine learning model for use by the company. It is essential to consider that credit risk analysis prioritizes recall over precision, as avoiding false negatives (missed defaults) is more critical than minimizing false positives (incorrectly flagged defaults). This model can significantly improve the company's credit approval process by identifying high-risk applicants more effectively and helping to reduce potential credit losses.
